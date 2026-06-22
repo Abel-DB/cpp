@@ -9,9 +9,7 @@ Ejemplo:
 ```cpp
 void mostrarNumero(int numero)
 {
-    std::cout
-        << numero
-        << '\n';
+    std::cout << numero << '\n';
 }
 ```
 
@@ -67,9 +65,7 @@ int main()
 
     incrementar(valor);
 
-    std::cout
-        << valor
-        << '\n';
+    std::cout << valor << '\n';
 
     return 0;
 }
@@ -191,9 +187,7 @@ int main()
 
     incrementar(valor);
 
-    std::cout
-        << valor
-        << '\n';
+    std::cout << valor << '\n';
 
     return 0;
 }
@@ -303,8 +297,7 @@ La variable original sí cambia.
 #include <iostream>
 #include <string>
 
-void agregarExclamacion(
-    std::string& texto)
+void agregarExclamacion(std::string& texto)
 {
     texto += "!";
 }
@@ -315,9 +308,7 @@ int main()
 
     agregarExclamacion(mensaje);
 
-    std::cout
-        << mensaje
-        << '\n';
+    std::cout << mensaje << '\n';
 
     return 0;
 }
@@ -334,9 +325,7 @@ Hola!
 # Múltiples Parámetros por Referencia
 
 ```cpp
-void intercambiar(
-    int& a,
-    int& b)
+void intercambiar(int& a, int& b)
 {
     int temporal {a};
 
@@ -392,12 +381,9 @@ const
 Ejemplo:
 
 ```cpp
-void mostrar(
-    const std::string& texto)
+void mostrar(const std::string& texto)
 {
-    std::cout
-        << texto
-        << '\n';
+    std::cout << texto << '\n';
 }
 ```
 
@@ -432,8 +418,7 @@ Se crea una copia.
 Con referencia constante:
 
 ```cpp
-void mostrar(
-    const std::string& texto)
+void mostrar(const std::string& texto)
 {
 }
 ```
@@ -468,9 +453,7 @@ int main()
 
     duplicar(valor);
 
-    std::cout
-        << valor
-        << '\n';
+    std::cout << valor << '\n';
 
     return 0;
 }
@@ -503,8 +486,7 @@ void incrementar(int& numero)
 Correcto:
 
 ```cpp
-void mostrar(
-    const std::string& texto)
+void mostrar(const std::string& texto)
 {
 }
 ```

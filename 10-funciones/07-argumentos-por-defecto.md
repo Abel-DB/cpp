@@ -9,10 +9,7 @@ Ejemplo:
 ```cpp
 void saludar(std::string nombre)
 {
-    std::cout
-        << "Hola "
-        << nombre
-        << '\n';
+    std::cout << "Hola " << nombre << '\n';
 }
 ```
 
@@ -73,8 +70,7 @@ Es un valor que se utiliza automáticamente cuando el argumento no se proporcion
 ## Sintaxis
 
 ```cpp
-tipo funcion(
-    tipo parametro = valor);
+tipo funcion(tipo parametro = valor);
 ```
 
 ---
@@ -82,8 +78,7 @@ tipo funcion(
 Ejemplo:
 
 ```cpp
-void saludar(
-    std::string nombre = "Invitado")
+void saludar(std::string nombre = "Invitado")
 {
 }
 ```
@@ -96,13 +91,9 @@ void saludar(
 #include <iostream>
 #include <string>
 
-void saludar(
-    std::string nombre = "Invitado")
+void saludar(std::string nombre = "Invitado")
 {
-    std::cout
-        << "Hola "
-        << nombre
-        << '\n';
+    std::cout << "Hola " << nombre << '\n';
 }
 
 int main()
@@ -224,12 +215,9 @@ Hola Ana
 # Ejemplo Numérico
 
 ```cpp
-void mostrarCantidad(
-    int cantidad = 1)
+void mostrarCantidad(int cantidad = 1)
 {
-    std::cout
-        << cantidad
-        << '\n';
+    std::cout << cantidad << '\n';
 }
 ```
 
@@ -272,15 +260,9 @@ Una función puede tener varios parámetros con valores por defecto.
 Ejemplo:
 
 ```cpp
-void crearPersonaje(
-    std::string nombre = "Jugador",
-    int nivel = 1)
+void crearPersonaje(std::string nombre = "Jugador", int nivel = 1)
 {
-    std::cout
-        << nombre
-        << " "
-        << nivel
-        << '\n';
+    std::cout << nombre << " " << nivel << '\n';
 }
 ```
 
@@ -309,15 +291,9 @@ Es posible proporcionar algunos argumentos y dejar que otros utilicen sus valore
 Ejemplo:
 
 ```cpp
-void crearPersonaje(
-    std::string nombre,
-    int nivel = 1)
+void crearPersonaje(std::string nombre, int nivel = 1)
 {
-    std::cout
-        << nombre
-        << " "
-        << nivel
-        << '\n';
+    std::cout << nombre << " " << nivel << '\n';
 }
 ```
 
@@ -346,9 +322,7 @@ Los parámetros con valores por defecto deben aparecer al final.
 Correcto:
 
 ```cpp
-void funcion(
-    int a,
-    int b = 10);
+void funcion(int a, int b = 10);
 ```
 
 ---
@@ -356,9 +330,7 @@ void funcion(
 Incorrecto:
 
 ```cpp
-void funcion(
-    int a = 10,
-    int b);
+void funcion(int a = 10, int b);
 ```
 
 ---
@@ -400,8 +372,7 @@ Normalmente los argumentos por defecto se colocan en la declaración.
 Declaración:
 
 ```cpp
-void saludar(
-    std::string nombre = "Invitado");
+void saludar(std::string nombre = "Invitado");
 ```
 
 ---
@@ -409,12 +380,9 @@ void saludar(
 Definición:
 
 ```cpp
-void saludar(
-    std::string nombre)
+void saludar(std::string nombre)
 {
-    std::cout
-        << nombre
-        << '\n';
+    std::cout << nombre << '\n';
 }
 ```
 
@@ -425,20 +393,16 @@ void saludar(
 ```cpp
 #include <iostream>
 
-void mostrar_linea(
-    char caracter = '-',
-    int cantidad = 10)
+void mostrar_linea(char caracter = '-', int cantidad = 10)
 {
     for (int i {0};
          i < cantidad;
          ++i)
     {
-        std::cout
-            << caracter;
+        std::cout << caracter;
     }
 
-    std::cout
-        << '\n';
+    std::cout << '\n';
 }
 
 int main()
@@ -518,9 +482,7 @@ double descuento = 0.0
 Correcto:
 
 ```cpp
-void funcion(
-    int valor,
-    int limite = 100);
+void funcion(int valor, int limite = 100);
 ```
 
 ---

@@ -9,8 +9,7 @@ Por ejemplo:
 ```cpp
 void saludar()
 {
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 ```
 
@@ -57,8 +56,7 @@ int main()
 
 void saludar()
 {
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 ```
 
@@ -88,16 +86,18 @@ todavía no conoce esa función.
 
 ```mermaid
 flowchart TD
-    A[Compilador]
-    B[main()]
-    C[saludar()]
-    D["¿Existe saludar()?"]
-    E[Error]
+    A["Compilador"]
+    B["main()"]
+    C["saludar()"]
+    D{"¿Existe saludar()?"}
+    E["Compila correctamente"]
+    F["Error: función no declarada"]
 
     A --> B
     B --> C
     C --> D
-    D --> E
+    D -->|Sí| E
+    D -->|No| F
 ```
 
 ---
@@ -115,8 +115,7 @@ Definir la función antes de usarla.
 
 void saludar()
 {
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 
 int main()
@@ -201,8 +200,7 @@ La definición contiene la implementación real.
 ```cpp
 void saludar()
 {
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 ```
 
@@ -265,8 +263,7 @@ int main()
 
 void saludar()
 {
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 ```
 
@@ -290,11 +287,11 @@ Aunque su implementación aparezca después.
 
 ```mermaid
 flowchart TD
-    A[Declaración]
-    B[main()]
-    C[Llamada]
-    D[Definición]
-    E[Ejecución]
+    A["main()"]
+    B["Llamar saludar()"]
+    C["Entrar en saludar()"]
+    D["Ejecutar código"]
+    E["Regresar a main()"]
 
     A --> B
     B --> C
@@ -358,8 +355,7 @@ int sumar(int a, int b)
 Uso:
 
 ```cpp
-int resultado =
-    sumar(10, 20);
+int resultado = sumar(10, 20);
 ```
 
 ---
@@ -561,14 +557,9 @@ int main()
 
 void mostrarMenu()
 {
-    std::cout
-        << "1. Crear\n";
-
-    std::cout
-        << "2. Editar\n";
-
-    std::cout
-        << "3. Eliminar\n";
+    std::cout << "1. Crear\n";
+    std::cout << "2. Editar\n";
+    std::cout << "3. Eliminar\n";
 }
 ```
 

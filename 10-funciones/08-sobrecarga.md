@@ -110,13 +110,8 @@ double sumar(double a, double b)
 
 int main()
 {
-    std::cout
-        << sumar(10, 20)
-        << '\n';
-
-    std::cout
-        << sumar(1.5, 2.5)
-        << '\n';
+    std::cout << sumar(10, 20) << '\n';
+    std::cout << sumar(1.5, 2.5) << '\n';
 
     return 0;
 }
@@ -231,10 +226,7 @@ int sumar(int a, int b)
 ---
 
 ```cpp
-int sumar(
-    int a,
-    int b,
-    int c)
+int sumar(int a, int b, int c)
 {
     return a + b + c;
 }
@@ -273,8 +265,7 @@ sumar(1, 2, 3);
 ```cpp
 void mostrar(int valor)
 {
-    std::cout
-        << "Entero\n";
+    std::cout << "Entero\n";
 }
 ```
 
@@ -283,8 +274,7 @@ void mostrar(int valor)
 ```cpp
 void mostrar(double valor)
 {
-    std::cout
-        << "Double\n";
+    std::cout << "Double\n";
 }
 ```
 
@@ -347,9 +337,7 @@ El orden de los parámetros también forma parte de la firma.
 Ejemplo:
 
 ```cpp
-void mostrar(
-    int numero,
-    double decimal)
+void mostrar(int numero, double decimal)
 {
 }
 ```
@@ -357,9 +345,7 @@ void mostrar(
 ---
 
 ```cpp
-void mostrar(
-    double decimal,
-    int numero)
+void mostrar(double decimal, int numero)
 {
 }
 ```
@@ -549,9 +535,7 @@ void mostrar(int numero)
 ---
 
 ```cpp
-void mostrar(
-    int numero,
-    int base = 10)
+void mostrar(int numero, int base = 10)
 {
 }
 ```
@@ -588,22 +572,15 @@ int area(int lado)
     return lado * lado;
 }
 
-int area(
-    int base,
-    int altura)
+int area(int base, int altura)
 {
     return base * altura;
 }
 
 int main()
 {
-    std::cout
-        << area(5)
-        << '\n';
-
-    std::cout
-        << area(4, 3)
-        << '\n';
+    std::cout << area(5) << '\n';
+    std::cout << area(4, 3) << '\n';
 
     return 0;
 }

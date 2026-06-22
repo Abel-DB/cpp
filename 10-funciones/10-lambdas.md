@@ -18,8 +18,7 @@ o:
 ```cpp
 void saludar()
 {
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 ```
 
@@ -165,11 +164,9 @@ Forma mínima:
 
 int main()
 {
-    auto saludar =
-        []()
+    auto saludar =[]()
         {
-            std::cout
-                << "Hola\n";
+            std::cout << "Hola\n";
         };
 
     saludar();
@@ -193,8 +190,7 @@ Creamos:
 ```cpp
 []()
 {
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 ```
 
@@ -250,8 +246,7 @@ C --> D["Ejecutar código"]
 # Lambda con Parámetros
 
 ```cpp
-auto sumar =
-    [](int a, int b)
+auto sumar = [](int a, int b)
     {
         return a + b;
     };
@@ -262,9 +257,7 @@ auto sumar =
 Uso:
 
 ```cpp
-std::cout
-    << sumar(10, 20)
-    << '\n';
+std::cout << sumar(10, 20) << '\n';
 ```
 
 Salida:
@@ -284,8 +277,7 @@ Generalmente el compilador puede deducirlo.
 Ejemplo:
 
 ```cpp
-auto sumar =
-    [](int a, int b)
+auto sumar = [](int a, int b)
     {
         return a + b;
     };
@@ -321,8 +313,7 @@ Ejemplo:
 
 ```cpp
 auto dividir =
-    [](double a, double b)
-    -> double
+    [](double a, double b) -> double
     {
         return a / b;
     };
@@ -373,12 +364,9 @@ Ejemplo:
 ```cpp
 int numero {10};
 
-auto mostrar =
-    [numero]()
+auto mostrar = [numero]()
     {
-        std::cout
-            << numero
-            << '\n';
+        std::cout << numero << '\n';
     };
 
 numero = 20;
@@ -425,12 +413,9 @@ Ejemplo:
 ```cpp
 int numero {10};
 
-auto mostrar =
-    [&numero]()
+auto mostrar = [&numero]()
     {
-        std::cout
-            << numero
-            << '\n';
+        std::cout << numero << '\n';
     };
 
 numero = 20;
@@ -471,12 +456,9 @@ Ejemplo:
 int a {10};
 int b {20};
 
-auto mostrar =
-    [=]()
+auto mostrar = [=]()
     {
-        std::cout
-            << a + b
-            << '\n';
+        std::cout << a + b << '\n';
     };
 ```
 
@@ -496,12 +478,9 @@ Ejemplo:
 int a {10};
 int b {20};
 
-auto mostrar =
-    [&]()
+auto mostrar = [&]()
     {
-        std::cout
-            << a + b
-            << '\n';
+        std::cout << a + b << '\n';
     };
 ```
 
@@ -519,12 +498,9 @@ Ejemplo:
 int a {10};
 int b {20};
 
-auto mostrar =
-    [a, &b]()
+auto mostrar = [a, &b]()
     {
-        std::cout
-            << a + b
-            << '\n';
+        std::cout << a + b << '\n';
     };
 ```
 
@@ -561,8 +537,7 @@ Ejemplo:
 ```cpp
 int numero {10};
 
-auto incrementar =
-    [numero]()
+auto incrementar = [numero]()
     {
         ++numero;
     };
@@ -591,14 +566,11 @@ Ejemplo:
 ```cpp
 int numero {10};
 
-auto incrementar =
-    [numero]() mutable
+auto incrementar = [numero]() mutable
     {
         ++numero;
 
-        std::cout
-            << numero
-            << '\n';
+        std::cout<< numero << '\n';
     };
 
 incrementar();
@@ -621,8 +593,7 @@ La variable original no cambia.
 ```cpp
 int numero {10};
 
-auto lambda =
-    [numero]() mutable
+auto lambda = [numero]() mutable
     {
         ++numero;
     };
@@ -653,8 +624,7 @@ Ejemplo:
 ```cpp
 int contador {0};
 
-auto incrementar =
-    [&contador]()
+auto incrementar = [&contador]()
     {
         ++contador;
     };
@@ -662,8 +632,7 @@ auto incrementar =
 incrementar();
 incrementar();
 
-std::cout
-    << contador;
+std::cout << contador;
 ```
 
 Salida:
@@ -713,15 +682,12 @@ Estos temas los veremos más adelante.
 
 int main()
 {
-    auto cuadrado =
-        [](int numero)
+    auto cuadrado = [](int numero)
         {
             return numero * numero;
         };
 
-    std::cout
-        << cuadrado(5)
-        << '\n';
+    std::cout << cuadrado(5) << '\n';
 
     return 0;
 }
@@ -855,11 +821,9 @@ Ejemplo:
 ```cpp
 int numero {10};
 
-auto mostrar =
-    [numero]()
+auto mostrar = [numero]()
     {
-        std::cout
-            << numero;
+        std::cout << numero;
     };
 
 numero = 20;

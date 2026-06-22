@@ -9,8 +9,7 @@ Hasta ahora todos nuestros programas tenían una estructura similar:
 
 int main()
 {
-    std::cout
-        << "Hola mundo\n";
+    std::cout << "Hola mundo\n";
 
     return 0;
 }
@@ -119,8 +118,7 @@ sumar()
 
 void saludar()
 {
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 
 int main()
@@ -143,10 +141,10 @@ Hola
 
 ```mermaid
 flowchart TD
-    A[main()]
-    B[saludar()]
+    A["main()"]
+    B["saludar()"]
     C["Mostrar Hola"]
-    D[Regresar a main()]
+    D["Regresar a main()"]
 
     A --> B
     B --> C
@@ -191,8 +189,7 @@ Observa:
 ```cpp
 void saludar()
 {
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 ```
 
@@ -280,8 +277,7 @@ Ejemplo:
 ```cpp
 void saludar()
 {
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 ```
 
@@ -321,8 +317,7 @@ Contienen los parámetros (los estudiaremos más adelante).
 
 ```cpp
 {
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 ```
 
@@ -349,8 +344,7 @@ Ejemplo:
 ```cpp
 void saludar()
 {
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 ```
 
@@ -412,19 +406,16 @@ Ejemplo:
 
 void saludar()
 {
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 
 int main()
 {
-    std::cout
-        << "Inicio\n";
+    std::cout << "Inicio\n";
 
     saludar();
 
-    std::cout
-        << "Fin\n";
+    std::cout << "Fin\n";
 
     return 0;
 }
@@ -488,7 +479,7 @@ Permiten dividir programas grandes en partes pequeñas.
 Esto:
 
 ```cpp
-mostrar_menu();
+mostrarMenu();
 ```
 
 es más claro que decenas de líneas repetidas.
@@ -514,14 +505,11 @@ Sin funciones:
 ```cpp
 int main()
 {
-    std::cout
-        << "================\n";
+    std::cout << "================\n";
 
-    std::cout
-        << "MENU PRINCIPAL\n";
+    std::cout << "MENU PRINCIPAL\n";
 
-    std::cout
-        << "================\n";
+    std::cout << "================\n";
 
     return 0;
 }
@@ -532,7 +520,7 @@ int main()
 Con funciones:
 
 ```cpp
-mostrar_menu();
+mostrarMenu();
 ```
 
 ---
@@ -569,11 +557,11 @@ es la función especial donde comienza la ejecución del programa.
 
 ```mermaid
 flowchart TD
-    A[Programa]
-    B[main()]
-    C[mostrar_menu()]
-    D[leer_opcion()]
-    E[procesar_opcion()]
+    A["Programa"]
+    B["main()"]
+    C["mostrarMenu()"]
+    D["leerOpcion()"]
+    E["procesarOpcion()"]
 
     A --> B
     B --> C
@@ -597,8 +585,7 @@ int main()
 
 void saludar()
 {
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 ```
 
@@ -634,8 +621,7 @@ int main()
 
 void saludar()
 {
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 ```
 
@@ -657,19 +643,19 @@ Declaraciones de funciones
 Correcto:
 
 ```cpp
-mostrar_menu();
+mostrarMenu();
 ```
 
 ---
 
 ```cpp
-leer_opcion();
+leerOpcion();
 ```
 
 ---
 
 ```cpp
-validar_datos();
+validarDatos();
 ```
 
 ---
@@ -679,7 +665,7 @@ validar_datos();
 Correcto:
 
 ```cpp
-mostrar_menu();
+mostrarMenu();
 ```
 
 ---
@@ -719,8 +705,7 @@ Ejemplo:
 ```cpp
 void saludar()
 {
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 ```
 

@@ -172,9 +172,7 @@ void contar(int numero)
         return;
     }
 
-    std::cout
-        << numero
-        << '\n';
+    std::cout << numero << '\n';
 
     contar(numero - 1);
 }
@@ -418,8 +416,7 @@ int factorial(int numero)
         return 1;
     }
 
-    return numero *
-           factorial(numero - 1);
+    return numero * factorial(numero - 1);
 }
 ```
 
@@ -599,9 +596,7 @@ for (int i {5};
      i > 0;
      --i)
 {
-    std::cout
-        << i
-        << '\n';
+    std::cout << i << '\n';
 }
 ```
 
@@ -703,15 +698,12 @@ int factorial(int numero)
         return 1;
     }
 
-    return numero *
-           factorial(numero - 1);
+    return numero * factorial(numero - 1);
 }
 
 int main()
 {
-    std::cout
-        << factorial(5)
-        << '\n';
+    std::cout << factorial(5) << '\n';
 
     return 0;
 }

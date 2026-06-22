@@ -9,10 +9,7 @@ Ejemplo:
 ```cpp
 void saludar(std::string nombre)
 {
-    std::cout
-        << "Hola "
-        << nombre
-        << '\n';
+    std::cout << "Hola " << nombre << '\n';
 }
 ```
 
@@ -99,12 +96,9 @@ int sumar(int a, int b)
 
 int main()
 {
-    int resultado =
-        sumar(10, 20);
+    int resultado = sumar(10, 20);
 
-    std::cout
-        << resultado
-        << '\n';
+    std::cout << resultado << '\n';
 
     return 0;
 }
@@ -269,9 +263,7 @@ flowchart TD
 # Retorno de double
 
 ```cpp
-double dividir(
-    double a,
-    double b)
+double dividir(double a, double b)
 {
     return a / b;
 }
@@ -282,8 +274,7 @@ double dividir(
 Uso:
 
 ```cpp
-double resultado =
-    dividir(10.0, 2.0);
+double resultado = dividir(10.0, 2.0);
 ```
 
 ---
@@ -310,8 +301,7 @@ bool esPar(int numero)
 Uso:
 
 ```cpp
-bool resultado =
-    esPar(10);
+bool resultado = esPar(10);
 ```
 
 ---
@@ -340,8 +330,7 @@ std::string obtenerSaludo()
 Uso:
 
 ```cpp
-std::string mensaje =
-    obtenerSaludo();
+std::string mensaje = obtenerSaludo();
 ```
 
 ---
@@ -363,9 +352,7 @@ No es obligatorio almacenarlo.
 Ejemplo:
 
 ```cpp
-std::cout
-    << sumar(10, 20)
-    << '\n';
+std::cout << sumar(10, 20) << '\n';
 ```
 
 Salida:
@@ -379,9 +366,7 @@ Salida:
 También podemos utilizarlo dentro de expresiones:
 
 ```cpp
-int total =
-    sumar(10, 20)
-    + sumar(5, 5);
+int total = sumar(10, 20) + sumar(5, 5);
 ```
 
 Resultado:
@@ -425,8 +410,7 @@ No devuelve ningún valor.
 ```cpp
 void saludar()
 {
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 ```
 
@@ -567,8 +551,7 @@ int sumar(int a, int b)
 {
     return a + b;
 
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 ```
 
@@ -577,8 +560,7 @@ int sumar(int a, int b)
 La línea:
 
 ```cpp
-std::cout
-    << "Hola\n";
+std::cout << "Hola\n";
 ```
 
 nunca se ejecuta.
@@ -621,12 +603,9 @@ int cuadrado(int numero)
 
 int main()
 {
-    int resultado =
-        cuadrado(5);
+    int resultado = cuadrado(5);
 
-    std::cout
-        << resultado
-        << '\n';
+    std::cout << resultado << '\n';
 
     return 0;
 }
@@ -792,8 +771,7 @@ return
 Esto:
 
 ```cpp
-std::cout
-    << resultado;
+std::cout << resultado;
 ```
 
 ↓

@@ -92,8 +92,7 @@ No devuelve ningún resultado.
 
 void saludar()
 {
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 
 int main()
@@ -165,8 +164,7 @@ no devuelve ningún valor.
 ```cpp
 void saludar()
 {
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 ```
 
@@ -231,10 +229,7 @@ Una función puede recibir datos aunque no devuelva nada.
 
 void saludar(std::string nombre)
 {
-    std::cout
-        << "Hola "
-        << nombre
-        << '\n';
+    std::cout << "Hola " << nombre << '\n';
 }
 
 int main()
@@ -288,9 +283,7 @@ void verificar(int numero)
         return;
     }
 
-    std::cout
-        << numero
-        << '\n';
+    std::cout << numero << '\n';
 }
 ```
 
@@ -414,14 +407,9 @@ void guardarArchivo()
 
 void mostrarMenu()
 {
-    std::cout
-        << "1. Crear\n";
-
-    std::cout
-        << "2. Editar\n";
-
-    std::cout
-        << "3. Salir\n";
+    std::cout << "1. Crear\n";
+    std::cout << "2. Editar\n";
+    std::cout << "3. Salir\n";
 }
 
 int main()
@@ -495,8 +483,7 @@ Menos flexible:
 ```cpp
 void sumar(int a, int b)
 {
-    std::cout
-        << a + b;
+    std::cout << a + b;
 }
 ```
 
@@ -516,8 +503,7 @@ int sumar(int a, int b)
 Ahora podemos hacer:
 
 ```cpp
-int resultado =
-    sumar(10, 20);
+int resultado = sumar(10, 20);
 ```
 
 ---
@@ -525,8 +511,7 @@ int resultado =
 o incluso:
 
 ```cpp
-std::cout
-    << sumar(10, 20);
+std::cout << sumar(10, 20);
 ```
 
 ---
@@ -540,8 +525,7 @@ Es importante no confundir estos conceptos.
 ## Mostrar
 
 ```cpp
-std::cout
-    << valor;
+std::cout << valor;
 ```
 
 ↓
@@ -705,8 +689,7 @@ return resultado;
 en lugar de:
 
 ```cpp
-std::cout
-    << resultado;
+std::cout << resultado;
 ```
 
 ---
@@ -754,8 +737,7 @@ return
 Esto:
 
 ```cpp
-std::cout
-    << valor;
+std::cout << valor;
 ```
 
 ↓

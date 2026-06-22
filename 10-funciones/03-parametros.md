@@ -9,8 +9,7 @@ Ejemplo:
 ```cpp
 void saludar()
 {
-    std::cout
-        << "Hola\n";
+    std::cout << "Hola\n";
 }
 ```
 
@@ -99,10 +98,7 @@ entra en la función.
 
 void saludar(std::string nombre)
 {
-    std::cout
-        << "Hola "
-        << nombre
-        << '\n';
+    std::cout << "Hola " << nombre << '\n';
 }
 
 int main()
@@ -148,9 +144,7 @@ std::string nombre
 y ejecuta:
 
 ```cpp
-std::cout
-    << "Hola "
-    << nombre;
+std::cout << "Hola " << nombre;
 ```
 
 ---
@@ -277,9 +271,7 @@ Parámetro
 
 void mostrarNumero(int numero)
 {
-    std::cout
-        << numero
-        << '\n';
+    std::cout << numero << '\n';
 }
 
 int main()
@@ -309,9 +301,7 @@ Una función puede recibir varios datos.
 ```cpp
 void mostrarSuma(int a, int b)
 {
-    std::cout
-        << a + b
-        << '\n';
+    std::cout << a + b << '\n';
 }
 ```
 
@@ -353,11 +343,7 @@ Ejemplo:
 ```cpp
 void mostrar(int a, int b)
 {
-    std::cout
-        << a
-        << ' '
-        << b
-        << '\n';
+    std::cout << a << ' ' << b << '\n';
 }
 ```
 
@@ -400,15 +386,9 @@ Los parámetros pueden tener tipos distintos.
 Ejemplo:
 
 ```cpp
-void mostrarPersona(
-    std::string nombre,
-    int edad)
+void mostrarPersona(std::string nombre, int edad)
 {
-    std::cout
-        << nombre
-        << " "
-        << edad
-        << '\n';
+    std::cout << nombre << " " << edad << '\n';
 }
 ```
 
@@ -417,9 +397,7 @@ void mostrarPersona(
 Llamada:
 
 ```cpp
-mostrarPersona(
-    "Juan",
-    25);
+mostrarPersona("Juan", 25);
 ```
 
 Salida:
@@ -611,26 +589,15 @@ flowchart TD
 #include <iostream>
 #include <string>
 
-void mostrarProducto(
-    std::string nombre,
-    double precio)
+void mostrarProducto(std::string nombre, double precio)
 {
-    std::cout
-        << nombre
-        << ": "
-        << precio
-        << '\n';
+    std::cout << nombre << ": " << precio << '\n';
 }
 
 int main()
 {
-    mostrarProducto(
-        "Teclado",
-        49.99);
-
-    mostrarProducto(
-        "Mouse",
-        19.99);
+    mostrarProducto("Teclado", 49.99);
+    mostrarProducto("Mouse", 19.99);
 
     return 0;
 }
@@ -688,8 +655,7 @@ Con qué datos trabaja
 Correcto:
 
 ```cpp
-void saludar(
-    std::string nombre)
+void saludar(std::string nombre)
 {
 }
 ```
@@ -699,8 +665,7 @@ void saludar(
 Evitar:
 
 ```cpp
-void saludar(
-    std::string x)
+void saludar(std::string x)
 {
 }
 ```
@@ -749,9 +714,7 @@ std::string nombre
 Correcto:
 
 ```cpp
-mostrarPersona(
-    nombre,
-    edad);
+mostrarPersona(nombre, edad);
 ```
 
 ---
@@ -799,8 +762,7 @@ void saludar(std::string nombre)
 {
 }
 
-std::cout
-    << nombre;
+std::cout << nombre;
 ```
 
 ---
