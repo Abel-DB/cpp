@@ -1,46 +1,36 @@
-# Atajos de Neovim
+# Neovim + NvChad Cheat Sheet (Versión Realmente Útil)
 
-## ¿Qué es Neovim?
+## Regla de Oro
 
-Neovim es un editor de texto orientado al desarrollo de software que permite trabajar de forma eficiente utilizando principalmente el teclado.
+Vim funciona con:
 
-Su filosofía consiste en minimizar el uso del mouse y maximizar la productividad mediante comandos.
+operador + movimiento
 
----
+Ejemplos:
 
-# Modos de trabajo
-
-| Modo    | Descripción                        |
-| ------- | ---------------------------------- |
-| Normal  | Navegación y ejecución de comandos |
-| Insert  | Escritura de texto                 |
-| Visual  | Selección de texto                 |
-| Command | Comandos avanzados                 |
+dw   -> borrar palabra
+cw   -> cambiar palabra
+yw   -> copiar palabra
 
 ---
 
-# Entrar en modo inserción
+# MODOS
 
-| Comando | Acción                         |
-| ------- | ------------------------------ |
-| i       | Insertar antes del cursor      |
-| a       | Insertar después del cursor    |
-| I       | Insertar al inicio de la línea |
-| A       | Insertar al final de la línea  |
-| o       | Crear línea debajo e insertar  |
-| O       | Crear línea arriba e insertar  |
-
----
-
-# Salir del modo inserción
-
-| Comando | Acción                |
-| ------- | --------------------- |
-| Esc     | Volver al modo normal |
+| Comando | Acción                      |
+| ------- | --------------------------- |
+| Esc     | Volver a modo Normal        |
+| i       | Insertar antes del cursor   |
+| a       | Insertar después del cursor |
+| I       | Insertar al inicio de línea |
+| A       | Insertar al final de línea  |
+| o       | Nueva línea debajo          |
+| O       | Nueva línea encima          |
 
 ---
 
-# Navegación básica
+# NAVEGACIÓN
+
+## Básica
 
 | Comando | Acción    |
 | ------- | --------- |
@@ -49,29 +39,23 @@ Su filosofía consiste en minimizar el uso del mouse y maximizar la productivida
 | k       | Arriba    |
 | l       | Derecha   |
 
----
+## Por palabras
 
-# Navegación por palabras
+| Comando | Acción            |
+| ------- | ----------------- |
+| w       | Siguiente palabra |
+| e       | Final de palabra  |
+| b       | Palabra anterior  |
 
-| Comando | Acción                     |
-| ------- | -------------------------- |
-| w       | Siguiente palabra          |
-| e       | Final de palabra           |
-| b       | Inicio de palabra anterior |
+## Por línea
 
----
+| Comando | Acción          |
+| ------- | --------------- |
+| 0       | Inicio de línea |
+| ^       | Primer carácter |
+| $       | Final de línea  |
 
-# Navegación por líneas
-
-| Comando | Acción                      |
-| ------- | --------------------------- |
-| 0       | Inicio de línea             |
-| ^       | Primer carácter de la línea |
-| $       | Final de línea              |
-
----
-
-# Navegación por archivo
+## Por archivo
 
 | Comando | Acción             |
 | ------- | ------------------ |
@@ -80,129 +64,151 @@ Su filosofía consiste en minimizar el uso del mouse y maximizar la productivida
 | 10G     | Ir a línea 10      |
 | :10     | Ir a línea 10      |
 
----
+## Scroll
 
-# Selección de texto
-
-## Visual Mode
-
-| Comando | Acción                   |
-| ------- | ------------------------ |
-| v       | Selección por caracteres |
-| V       | Selección por líneas     |
-| Ctrl+v  | Selección por bloques    |
+| Comando | Acción              |
+| ------- | ------------------- |
+| Ctrl+d  | Media página abajo  |
+| Ctrl+u  | Media página arriba |
+| Ctrl+f  | Página abajo        |
+| Ctrl+b  | Página arriba       |
 
 ---
 
-## Selecciones rápidas
+# SELECCIÓN
 
-| Comando | Acción                              |
-| ------- | ----------------------------------- |
-| viw     | Seleccionar palabra                 |
-| vip     | Seleccionar párrafo                 |
-| vap     | Seleccionar párrafo completo        |
-| vw      | Seleccionar hasta siguiente palabra |
-| ve      | Seleccionar hasta final de palabra  |
-| v0      | Seleccionar hasta inicio de línea   |
-| v$      | Seleccionar hasta final de línea    |
+| Comando | Acción             |
+| ------- | ------------------ |
+| v       | Visual             |
+| V       | Visual por líneas  |
+| Ctrl+v  | Visual por bloques |
 
 ---
 
-# Copiar y pegar
+# TEXT OBJECTS (MUY IMPORTANTES)
 
-| Comando | Acción       |
-| ------- | ------------ |
-| y       | Copiar       |
-| yy      | Copiar línea |
-| p       | Pegar debajo |
-| P       | Pegar encima |
+## Palabras
 
----
+| Comando | Acción            |
+| ------- | ----------------- |
+| iw      | Dentro de palabra |
+| aw      | Palabra completa  |
+| ciw     | Cambiar palabra   |
+| diw     | Borrar palabra    |
+| yiw     | Copiar palabra    |
 
-# Eliminar texto
+## Comillas
 
-| Comando | Acción                        |
-| ------- | ----------------------------- |
-| x       | Eliminar carácter             |
-| dd      | Eliminar línea                |
-| diw     | Eliminar contenido de palabra |
-| daw     | Eliminar palabra completa     |
+| Comando | Acción            |
+| ------- | ----------------- |
+| ci"     | Cambiar contenido |
+| di"     | Borrar contenido  |
+| yi"     | Copiar contenido  |
 
----
+## Paréntesis
 
-# Edición rápida
+| Comando | Acción            |
+| ------- | ----------------- |
+| ci(     | Cambiar contenido |
+| di(     | Borrar contenido  |
+| yi(     | Copiar contenido  |
 
-| Comando | Acción                           |
-| ------- | -------------------------------- |
-| ciw     | Cambiar palabra                  |
-| ci"     | Cambiar contenido entre comillas |
-| cc      | Cambiar línea completa           |
-| .       | Repetir último comando           |
+## Llaves
 
----
-
-# Deshacer y rehacer
-
-| Comando | Acción   |
-| ------- | -------- |
-| u       | Deshacer |
-| Ctrl+r  | Rehacer  |
+| Comando | Acción         |
+| ------- | -------------- |
+| ci{     | Cambiar bloque |
+| di{     | Borrar bloque  |
+| yi{     | Copiar bloque  |
 
 ---
 
-# Búsqueda
+# COPIAR Y PEGAR
+
+| Comando | Acción           |
+| ------- | ---------------- |
+| yy      | Copiar línea     |
+| y       | Copiar selección |
+| p       | Pegar después    |
+| P       | Pegar antes      |
+
+---
+
+# BORRAR
+
+| Comando | Acción                      |
+| ------- | --------------------------- |
+| x       | Borrar carácter             |
+| dd      | Borrar línea                |
+| dw      | Borrar palabra              |
+| diw     | Borrar palabra actual       |
+| d$      | Borrar hasta final de línea |
+
+---
+
+# CAMBIAR
+
+| Comando | Acción                       |
+| ------- | ---------------------------- |
+| cw      | Cambiar palabra              |
+| ciw     | Cambiar palabra actual       |
+| cc      | Cambiar línea                |
+| c$      | Cambiar hasta final de línea |
+
+---
+
+# DESHACER
+
+| Comando | Acción |
+| ------- | ------ |
+| u       | Undo   |
+| Ctrl+r  | Redo   |
+
+---
+
+# BÚSQUEDA
 
 | Comando | Acción                     |
 | ------- | -------------------------- |
-| /texto  | Buscar texto               |
+| /texto  | Buscar                     |
 | n       | Siguiente coincidencia     |
 | N       | Coincidencia anterior      |
 | *       | Buscar palabra bajo cursor |
 
 ---
 
-# Comentarios
+# COMENTARIOS (Comment.nvim)
 
-## Comment.nvim
-
-| Comando | Acción                    |
-| ------- | ------------------------- |
-| gcc     | Comentar línea            |
-| Ngcc    | Comentar N líneas         |
-| gc      | Comentar selección visual |
-
-### Ejemplos
-
-```text
-gcc
-3gcc
-5gcc
-```
+| Comando | Acción             |
+| ------- | ------------------ |
+| gcc     | Comentar línea     |
+| gc      | Comentar selección |
+| 3gcc    | Comentar 3 líneas  |
 
 ---
 
-# Indentación
+# INDENTACIÓN
 
-| Comando | Acción               |
-| ------- | -------------------- |
-| >>      | Indentar línea       |
-| <<      | Desindentar línea    |
-| gg=G    | Autoindentar archivo |
+| Comando | Acción                         |
+| ------- | ------------------------------ |
+| >>      | Indentar                       |
+| <<      | Desindentar                    |
+| gg=G    | Formatear indentación completa |
 
 ---
 
-# Ventanas
+# VENTANAS
 
-## Crear ventanas
+## Crear
 
 | Comando | Acción              |
 | ------- | ------------------- |
 | :sp     | División horizontal |
 | :vsp    | División vertical   |
 
----
+## Moverse
 
-## Moverse entre ventanas
+### Vim
 
 | Comando  | Acción    |
 | -------- | --------- |
@@ -211,222 +217,194 @@ gcc
 | Ctrl+w k | Arriba    |
 | Ctrl+w l | Derecha   |
 
----
+### NvChad
 
-## Redimensionar ventanas
-
-| Comando  | Acción          |
-| -------- | --------------- |
-| Ctrl+w < | Reducir ancho   |
-| Ctrl+w > | Aumentar ancho  |
-| Ctrl+w - | Reducir altura  |
-| Ctrl+w + | Aumentar altura |
+| Comando | Acción    |
+| ------- | --------- |
+| Ctrl+h  | Izquierda |
+| Ctrl+j  | Abajo     |
+| Ctrl+k  | Arriba    |
+| Ctrl+l  | Derecha   |
 
 ---
 
-## Cerrar
+# BUFFERS
 
-| Comando | Acción         |
-| ------- | -------------- |
-| :q      | Cerrar ventana |
-| :qa     | Cerrar todas   |
-
----
-
-# Buffers
+## Vim
 
 | Comando | Acción           |
 | ------- | ---------------- |
 | :ls     | Listar buffers   |
-| :bnext  | Buffer siguiente |
+| :bnext  | Siguiente buffer |
 | :bprev  | Buffer anterior  |
 | :bd     | Cerrar buffer    |
 
+## NvChad
+
+| Comando   | Acción           |
+| --------- | ---------------- |
+| Tab       | Siguiente buffer |
+| Shift+Tab | Buffer anterior  |
+| Space x   | Cerrar buffer    |
+
 ---
 
-# Guardar archivos
+# GUARDAR
 
 | Comando | Acción            |
 | ------- | ----------------- |
 | :w      | Guardar           |
 | :wq     | Guardar y salir   |
 | :q!     | Salir sin guardar |
+| :qa     | Salir de todo     |
 
 ---
 
-# Telescope (NvChad)
+# MARCAS
 
-## Búsquedas
-
-| Comando  | Acción                   |
-| -------- | ------------------------ |
-| Space ff | Buscar archivos          |
-| Space fb | Buscar buffers abiertos  |
-| Space fw | Buscar texto en proyecto |
-| Space fo | Archivos recientes       |
+| Comando | Acción                    |
+| ------- | ------------------------- |
+| ma      | Crear marca a             |
+| 'a      | Ir a la línea de la marca |
+| `a      | Ir a posición exacta      |
 
 ---
 
-## Edición
-
-| Comando  | Acción           |
-| -------- | ---------------- |
-| Space fm | Formatear código |
-
----
-
-# LSP (Clangd)
-
-## Navegación
-
-| Comando | Acción              |
-| ------- | ------------------- |
-| gd      | Ir a definición     |
-| gr      | Ver referencias     |
-| gi      | Ir a implementación |
-| K       | Ver documentación   |
-
----
-
-## Refactorización
-
-| Comando  | Acción            |
-| -------- | ----------------- |
-| Space ca | Code Action       |
-| Space rn | Renombrar símbolo |
-
----
-
-# Programación en C++
-
-## Navegación entre bloques
-
-| Comando | Acción                                      |
-| ------- | ------------------------------------------- |
-| %       | Saltar entre llaves, paréntesis o corchetes |
-
----
-
-## Utilidades
+# TELESCOPE (NvChad)
 
 | Comando  | Acción             |
 | -------- | ------------------ |
-| gd       | Ir a definición    |
-| gr       | Buscar referencias |
-| K        | Documentación      |
-| Space fm | Formatear código   |
-| gg=G     | Reindentar archivo |
+| Space ff | Buscar archivos    |
+| Space fw | Buscar texto       |
+| Space fb | Buffers            |
+| Space fo | Archivos recientes |
+| Space fh | Ayuda              |
 
 ---
 
-# Macros
+# EXPLORADOR DE ARCHIVOS
 
-## Grabar macro
+| Comando | Acción          |
+| ------- | --------------- |
+| Space e | Abrir NvimTree  |
+| Ctrl+n  | Toggle NvimTree |
+
+---
+
+# LSP
+
+## Navegación
+
+| Comando | Acción          |
+| ------- | --------------- |
+| gd      | Ir a definición |
+| gr      | Referencias     |
+| gi      | Implementación  |
+| K       | Documentación   |
+
+## Refactorización
+
+| Comando  | Acción      |
+| -------- | ----------- |
+| Space ca | Code Action |
+| Space rn | Rename      |
+
+## Formato
+
+| Comando  | Acción            |
+| -------- | ----------------- |
+| Space fm | Formatear archivo |
+
+---
+
+# TERMINAL (NvChad)
+
+| Comando | Acción              |
+| ------- | ------------------- |
+| Alt+i   | Terminal flotante   |
+| Space h | Terminal horizontal |
+| Space v | Terminal vertical   |
+
+---
+
+# GIT
+
+## Terminal
+
+git status
+git add .
+git commit -m "mensaje"
+git push
+git pull
+
+## Telescope Git
+
+| Comando  | Acción     |
+| -------- | ---------- |
+| Space gt | Git status |
+| Space cm | Commits    |
+
+---
+
+# C++
+
+| Comando  | Acción                  |
+| -------- | ----------------------- |
+| %        | Saltar entre (), {}, [] |
+| gd       | Ir a definición         |
+| gr       | Ver referencias         |
+| K        | Documentación           |
+| Space fm | Formatear               |
+
+---
+
+# MACROS
 
 | Comando | Acción                     |
 | ------- | -------------------------- |
 | qa      | Grabar macro en registro a |
 | q       | Detener grabación          |
+| @a      | Ejecutar macro             |
+| @@      | Repetir última macro       |
 
 ---
 
-## Ejecutar macro
-
-| Comando | Acción               |
-| ------- | -------------------- |
-| @a      | Ejecutar macro a     |
-| @@      | Repetir última macro |
-
----
-
-# Cheat Sheet Personal
-
-## Uso diario
+# LOS 15 COMANDOS MÁS IMPORTANTES
 
 ```text
-i
-a
-o
 Esc
-
-h j k l
-
+i
+o
 w
-e
 b
-
 0
 $
-
 gg
 G
-
 yy
 dd
 p
-
-u
-Ctrl+r
-
-/texto
+ciw
+/
 n
+```
 
-gcc
+# LOS 15 MÁS IMPORTANTES DE NVCHAD
 
-:w
-:wq
-
-:bd
-
+```text
+Space ff
+Space fw
+Space fb
+Space e
 gd
 gr
 K
-
-Space ff
-Space fw
-
 Space fm
-
-%
+Tab
+Shift+Tab
+Space x
+Ctrl+h
+Ctrl+j
+Ctrl+k
+Ctrl+l
 ```
-
----
-
-# Relación con otras herramientas
-
-Neovim se integra con:
-
-* Clangd
-* GCC / G++
-* Clang / Clang++
-* Git
-* GitHub
-* Make
-* CMake
-* GDB
-* Kitty
-* Zsh
-
----
-
-# Conclusión
-
-Neovim es una herramienta extremadamente potente para el desarrollo de software. Dominar estos atajos permite navegar, editar y mantener proyectos de forma rápida y eficiente, incrementando significativamente la productividad.
-
----
-
-# Resumen
-
-| Categoría  | Contenido           |
-| ---------- | ------------------- |
-| Navegación | h, j, k, l, w, e, b |
-| Inserción  | i, a, o, I, A, O    |
-| Selección  | v, V, Ctrl+v        |
-| Edición    | ciw, diw, yy, dd    |
-| Búsqueda   | /, n, N, *          |
-| Ventanas   | :sp, :vsp           |
-| Buffers    | :ls, :bd            |
-| Telescope  | Space ff, fw, fb    |
-| LSP        | gd, gr, gi, K       |
-| C++        | %, Space fm         |
-| Macros     | qa, @a              |
